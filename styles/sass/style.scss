@@ -1,0 +1,21 @@
+@use "setup";
+@use "wrapper";
+@use "header";
+
+$black: #2C2C2C;
+$offWhite: #F0EFED;
+$forestGreen: #074115;
+$sunnyYellow: #F8E71C;
+$green: #0E902D; 
+
+$robotoFont:'Roboto', sans-serif;
+
+//initial typography
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: $offWhite;
+}
