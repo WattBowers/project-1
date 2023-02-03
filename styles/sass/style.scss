@@ -1,21 +1,31 @@
 @use "setup";
 @use "wrapper";
 @use "header";
-
-$black: #2C2C2C;
-$offWhite: #F0EFED;
-$forestGreen: #074115;
-$sunnyYellow: #F8E71C;
-$green: #0E902D; 
-
-$robotoFont:'Roboto', sans-serif;
+@use "./variables" as *;
 
 //initial typography
 
 html {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 125%;
+    color: $offWhite;
 }
 
-body {
-    background-color: $offWhite;
+
+ul {
+    list-style: none;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+// initial image styling 
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

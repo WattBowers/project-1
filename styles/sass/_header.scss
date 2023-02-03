@@ -1,16 +1,70 @@
+@use "./variables" as *;
+
 header {
+    background-image: url(../../assets/home-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
     ul{
         display: flex;
         align-items: center;
-        list-style: none;
         li {
-            margin: 5px;
+            margin: 10px 25px;
         }
-        li.title {
-            font-weight: bold;
-            font-size: 24px;
-            
+        a {
+            color: $offWhite;
+            font-size: .8rem;
+            letter-spacing: 1px;
+        }
+        a.title {
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+        a:hover {
+            color: $sunnyYellow;
+        }
+        a.title:hover {
+            color: $offWhite;
         }
     }
+    .horizontalAlign {
+        display: flex;
+        justify-content: center;
+        height: calc(100vh - 56.797px);
+        h1{
+            font-size: 8.3rem;
+            font-weight: 400;
+            margin: 20px;
+            line-height: 92px;
+            z-index: 1;
+        }
+    }
+    .titleFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: start;
+        .yellowText {
+            color: $sunnyYellow;
+        }
+    }
+    .headerBoxImage {
+        height: 575px;
+        width: 575px;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 35vh;
+        border: 1px solid black;
+    }
     
+}
+
+@media (max-width: 900px) {
+    header.headerBoxImage {
+        border: 2px solid green;
+    } 
 }

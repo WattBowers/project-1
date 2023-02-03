@@ -233,6 +233,13 @@ html {
   height: 100%;
 }
 
+header {
+  background-image: url(../../assets/home-image-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+}
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,20 +247,94 @@ header ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style: none;
 }
 header ul li {
-  margin: 5px;
+  margin: 10px 25px;
 }
-header ul li.title {
-  font-weight: bold;
-  font-size: 24px;
+header ul a {
+  color: #F0EFED;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+header ul a.title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+header ul a:hover {
+  color: #F8E71C;
+}
+header ul a.title:hover {
+  color: #F0EFED;
+}
+header .horizontalAlign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: calc(100vh - 56.797px);
+}
+header .horizontalAlign h1 {
+  font-size: 8.3rem;
+  font-weight: 400;
+  margin: 20px;
+  line-height: 92px;
+  z-index: 1;
+}
+header .titleFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: start;
+}
+header .titleFlex .yellowText {
+  color: #F8E71C;
+}
+header .headerBoxImage {
+  height: 575px;
+  width: 575px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 35vh;
+  border: 1px solid black;
 }
 
+@media (max-width: 900px) {
+  header.headerBoxImage {
+    border: 2px solid green;
+  }
+}
 html {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 125%;
+  color: #F0EFED;
 }
 
-body {
-  background-color: #F0EFED;
+ul {
+  list-style: none;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
