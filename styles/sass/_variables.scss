@@ -4,4 +4,8 @@ $forestGreen: #074115;
 $sunnyYellow: #F8E71C;
 $green: #0E902D; 
 
-$robotoFont:'Roboto', sans-serif;
+@mixin robotoFont {
+    font-family: 'Roboto', sans-serif;
+    line-height: 32px;
+    font-weight: 400;
+  }

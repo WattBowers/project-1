@@ -1,16 +1,24 @@
 @use "setup";
 @use "wrapper";
 @use "header";
+@use "whatIsPLanted";
+@use "readMore";
+@use "infoList";
 @use "./variables" as *;
 
-//initial typography
+//initial typography and styles
+
+* {
+    margin:0;
+    padding:0;
+    }
 
 html {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 125%;
     color: $offWhite;
+    line-height: 1;
 }
-
 
 ul {
     list-style: none;
@@ -28,4 +36,14 @@ img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+//green anchor styling used throughout website
+
+a {
+    background-color: $green;
+    color: $offWhite;
+    padding: 15px 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }

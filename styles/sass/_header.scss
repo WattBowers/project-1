@@ -5,6 +5,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: $offWhite;
     height: 95vh;
     ul{
         display: flex;
@@ -16,6 +17,7 @@ header {
             color: $offWhite;
             font-size: .8rem;
             letter-spacing: 1px;
+            background: none;
         }
         a.title {
             text-transform: capitalize;
@@ -52,19 +54,19 @@ header {
         }
     }
     .headerBoxImage {
-        height: 575px;
-        width: 575px;
+        height: auto;
+        min-width: 600px;
         margin: 0;
         position: absolute;
         right: 0;
-        top: 35vh;
-        border: 1px solid black;
+        top: 33vh;
+        
     }
     
 }
-
 @media (max-width: 900px) {
-    header.headerBoxImage {
-        border: 2px solid green;
+    .headerBoxImage {
+        display: none;
+        
     } 
 }

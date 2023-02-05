@@ -238,6 +238,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #F0EFED;
   height: 95vh;
 }
 header ul {
@@ -255,6 +256,7 @@ header ul a {
   color: #F0EFED;
   font-size: 0.8rem;
   letter-spacing: 1px;
+  background: none;
 }
 header ul a.title {
   text-transform: capitalize;
@@ -303,24 +305,165 @@ header .titleFlex .yellowText {
   color: #F8E71C;
 }
 header .headerBoxImage {
-  height: 575px;
-  width: 575px;
+  height: auto;
+  min-width: 600px;
   margin: 0;
   position: absolute;
   right: 0;
-  top: 35vh;
-  border: 1px solid black;
+  top: 33vh;
 }
 
 @media (max-width: 900px) {
-  header.headerBoxImage {
-    border: 2px solid green;
+  .headerBoxImage {
+    display: none;
   }
 }
+.whatIsPlanted {
+  height: 90vh;
+  background-color: #F0EFED;
+  color: #2C2C2C;
+}
+.whatIsPlanted h2 {
+  font-size: 2.815rem;
+  letter-spacing: 1.3px;
+}
+.whatIsPlanted p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+  padding: 30px 0;
+}
+
+.whatIsPlantedFlex {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.readMore {
+  background-color: white;
+  min-height: 100vh;
+  color: black;
+}
+
+.columnFlex {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.columnFlex .one {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.columnFlex .two {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+.columnFlex .three {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.upcomingWorkshopsFlex, .uniquePlantsFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.upcomingWorkshopsFlex p, .uniquePlantsFlex p {
+  width: 90%;
+  padding: 20px 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+}
+.upcomingWorkshopsFlex h3, .uniquePlantsFlex h3 {
+  margin-top: 5vh;
+}
+.upcomingWorkshopsFlex h3, .upcomingWorkshopsFlex p, .uniquePlantsFlex h3, .uniquePlantsFlex p {
+  color: black;
+}
+
+.upcomingWorkshopsFlex {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.uniquePlantsFlex {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.uniquePlantsFlex p {
+  text-align: end;
+}
+.imageContainer {
+  height: auto;
+  width: 44vw;
+  margin: 0;
+}
+
+.infoList {
+  height: 75vh;
+  background-color: #F0EFED;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 125%;
   color: #F0EFED;
+  line-height: 1;
 }
 
 ul {
@@ -337,4 +480,12 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+a {
+  background-color: #0E902D;
+  color: #F0EFED;
+  padding: 15px 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
