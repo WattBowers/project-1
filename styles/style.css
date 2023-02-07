@@ -233,6 +233,42 @@ html {
   height: 100%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 125%;
+  color: #F0EFED;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  background-color: #0E902D;
+  color: #F0EFED;
+  padding: 15px 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 header {
   background-image: url(../../assets/home-image-1.jpg);
   background-repeat: no-repeat;
@@ -245,6 +281,7 @@ header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-transform: uppercase;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -313,11 +350,6 @@ header .headerBoxImage {
   top: 33vh;
 }
 
-@media (max-width: 900px) {
-  .headerBoxImage {
-    display: none;
-  }
-}
 .whatIsPlanted {
   height: 90vh;
   background-color: #F0EFED;
@@ -364,7 +396,7 @@ header .headerBoxImage {
   display: -ms-flexbox;
   display: flex;
 }
-.columnFlex .one {
+.columnFlex .colOne {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   display: -webkit-box;
@@ -381,11 +413,11 @@ header .headerBoxImage {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.columnFlex .two {
+.columnFlex .colTwo {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
 }
-.columnFlex .three {
+.columnFlex .colThree {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   display: -webkit-box;
@@ -414,6 +446,9 @@ header .headerBoxImage {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .upcomingWorkshopsFlex p, .uniquePlantsFlex p {
   width: 90%;
@@ -421,9 +456,6 @@ header .headerBoxImage {
   font-family: "Roboto", sans-serif;
   line-height: 32px;
   font-weight: 400;
-}
-.upcomingWorkshopsFlex h3, .uniquePlantsFlex h3 {
-  margin-top: 5vh;
 }
 .upcomingWorkshopsFlex h3, .upcomingWorkshopsFlex p, .uniquePlantsFlex h3, .uniquePlantsFlex p {
   color: black;
@@ -443,49 +475,154 @@ header .headerBoxImage {
 .uniquePlantsFlex p {
   text-align: end;
 }
+
 .imageContainer {
   height: auto;
   width: 44vw;
   margin: 0;
+  background-color: #F8E71C;
+}
+
+.positionRelativeUpLeft {
+  position: relative;
+  bottom: 80px;
+}
+
+.positionRelativeDownRight {
+  position: relative;
+  top: 80px;
+}
+
+.imageLeft, .imageRight {
+  position: relative;
+}
+
+.imageLeft {
+  bottom: 25px;
+  right: 25px;
+}
+
+.imageRight {
+  top: 25px;
+  left: 25px;
 }
 
 .infoList {
   height: 75vh;
   background-color: #F0EFED;
+  color: black;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 40;
 }
 
-html {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 125%;
-  color: #F0EFED;
-  line-height: 1;
+.infoListFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
-
-ul {
-  list-style: none;
-  margin: 0;
-  text-transform: uppercase;
+.infoListFlex li {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
 }
-
-a, a:visited, a:hover {
-  text-decoration: none;
+.infoListFlex li div.icon {
+  position: relative;
+  bottom: 10px;
+  border-radius: 50%;
+  background-color: #F8E71C;
+  height: 50%;
+  width: 8%;
+  padding: 10px;
+  margin-right: 10px;
 }
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
+.infoListFlex li div.textBlock {
+  width: 95%;
 }
-
-a {
-  background-color: #0E902D;
-  color: #F0EFED;
-  padding: 15px 30px;
+.infoListFlex li div.textBlock h3 {
   font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+.infoListFlex li div.textBlock p {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.backgroundImage {
+  height: 50vh;
+  background-image: url(../../../../assets/banner-image.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.founder {
+  height: 60vh;
+  background-color: #F0EFED;
+}
+
+.founderFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.founderFlex figure {
+  background-color: #F8E71C;
+  width: 30%;
+  margin: 0;
+  margin-right: 90px;
+}
+.founderFlex figure img {
+  position: relative;
+  bottom: 15px;
+  right: 15px;
+}
+
+.founderTextFlex {
+  width: 70%;
+  margin-left: 90px;
+}
+.founderTextFlex h2, .founderTextFlex p {
+  color: black;
+}
+.founderTextFlex p {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 40px 0;
+}
+
+.gallery {
+  height: 70vh;
+}
+
+.galleryFlex {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 900px) {
+  .headerBoxImage {
+    display: none;
+  }
 }

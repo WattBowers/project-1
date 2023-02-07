@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use "../variables" as *;
 
 header {
     background-image: url(../../assets/home-image-1.jpg);
@@ -9,6 +9,7 @@ header {
     height: 95vh;
     ul{
         display: flex;
+        text-transform: uppercase;
         align-items: center;
         li {
             margin: 10px 25px;
@@ -63,10 +64,4 @@ header {
         
     }
     
-}
-@media (max-width: 900px) {
-    .headerBoxImage {
-        display: none;
-        
-    } 
 }

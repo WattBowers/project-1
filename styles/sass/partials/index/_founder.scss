@@ -1,0 +1,37 @@
+@use "../variables" as *;
+@use "./readMore";
+
+.founder {
+    height: 60vh;
+    background-color: $offWhite;
+}
+
+.founderFlex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    figure {
+        background-color: $sunnyYellow;
+        width: 30%;
+        margin: 0;
+        margin-right: 90px;
+        img {
+            position: relative;
+            bottom: 15px; 
+            right: 15px;
+        }
+    }
+}
+
+.founderTextFlex {
+    width: 70%; 
+    margin-left: 90px;
+    h2, p {
+        color: black;
+    }
+    p {
+        @include robotoFont;
+        margin: 40px 0;
+
+    }
+}
