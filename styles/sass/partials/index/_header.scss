@@ -2,7 +2,6 @@
 
 header {
     background-image: url(../../assets/home-image-1.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: $offWhite;
@@ -24,6 +23,7 @@ header {
             text-transform: capitalize;
             font-size: 1.6rem;
             letter-spacing: 1px;
+            font-weight: 100;
         }
         a:hover {
             color: $sunnyYellow;
@@ -64,4 +64,31 @@ header {
         
     }
     
+}
+
+// Styles for the header on the Contact page
+
+
+.contactHeader {
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    nav {
+        background-color: #050a0c;
+        width: 100vw;
+    }
+    .contactFlex {
+        display: flex;
+    }
+    //this sets the background colors/images to the correct size on the contact page
+    .foliageBackground {
+        height: 50%;
+        background-image: url(../../assets/home-image-1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .offWhiteBackground {
+        height: 50%;
+        background-color: $offWhite;
+    }
 }

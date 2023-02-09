@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+footer {
+    height: 3vh;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        @include robotoFont;
+        font-size: .7rem;
+        line-height: normal;
+        color: rgb(207, 207, 207);
+    }
+}

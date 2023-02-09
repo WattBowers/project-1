@@ -271,7 +271,6 @@ a {
 
 header {
   background-image: url(../../assets/home-image-1.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #F0EFED;
@@ -299,6 +298,7 @@ header ul a.title {
   text-transform: capitalize;
   font-size: 1.6rem;
   letter-spacing: 1px;
+  font-weight: 100;
 }
 header ul a:hover {
   color: #F8E71C;
@@ -348,6 +348,31 @@ header .headerBoxImage {
   position: absolute;
   right: 0;
   top: 33vh;
+}
+
+.contactHeader {
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+.contactHeader nav {
+  background-color: #050a0c;
+  width: 100vw;
+}
+.contactHeader .contactFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactHeader .foliageBackground {
+  height: 50%;
+  background-image: url(../../assets/home-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.contactHeader .offWhiteBackground {
+  height: 50%;
+  background-color: #F0EFED;
 }
 
 .whatIsPlanted {
@@ -619,6 +644,204 @@ header .headerBoxImage {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.galleryFlex figure {
+  width: 33.3333333333%;
+  margin: 0 10px;
+}
+
+.contactMain {
+  height: 97vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  z-index: 1;
+}
+
+.infoCol {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.infoCol h1 {
+  color: #F8E71C;
+  line-height: 92px;
+  font-size: 4rem;
+}
+.infoCol .contactInfo {
+  color: black;
+  position: relative;
+  top: 25px;
+  line-height: 30px;
+}
+.infoCol .contactInfo p {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+}
+.infoCol .contactInfo .emailInfo {
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.socialsFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  right: 9px;
+}
+.socialsFlex figure {
+  max-height: 30px;
+  max-width: 30px;
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+.socialsFlex a {
+  background-color: transparent;
+  padding: 0;
+}
+
+.formCol {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.formCol .formBox {
+  background-color: #F8E71C;
+  height: 500px;
+  width: 90%;
+  position: relative;
+  top: 70px;
+}
+.formCol .formBox form {
+  background-color: white;
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.formFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.formFlex .inputFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 15%;
+}
+.formFlex .inputFlex input {
+  width: calc(50% - 10px);
+  border: none;
+  border-bottom: 2px solid #0E902D;
+  outline: none;
+}
+.formFlex .inputFlex input::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex .inputFlex input::-moz-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex .inputFlex input:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex .inputFlex input::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex .inputFlex input::placeholder {
+  font-size: 0.8rem;
+}
+.formFlex textarea {
+  border: 2px solid #0E902D;
+  resize: none;
+  outline: none;
+  padding: 15px;
+}
+.formFlex textarea::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex textarea::-moz-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex textarea:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex textarea::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+.formFlex textarea::placeholder {
+  font-size: 0.8rem;
+}
+.formFlex input[type=submit] {
+  background-color: #0E902D;
+  color: #F0EFED;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  border: none;
+}
+
+footer {
+  height: 3vh;
+  background-color: #2C2C2C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: normal;
+  color: rgb(207, 207, 207);
 }
 
 @media (max-width: 900px) {
