@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -244,6 +245,7 @@ html {
   color: #F0EFED;
   line-height: 1;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 ul {
@@ -257,7 +259,7 @@ a, a:visited, a:hover {
 
 img {
   width: 100%;
-  height: auto;
+  height: inherit;
   display: block;
 }
 
@@ -373,6 +375,21 @@ header .headerBoxImage {
 .contactHeader .offWhiteBackground {
   height: 50%;
   background-color: #F0EFED;
+}
+
+.blogHeader {
+  height: 55vh;
+  background-image: url(../../../../assets/blog-header-1.jpg);
+}
+.blogHeader nav {
+  background-color: #050a0c;
+  width: 100vw;
+}
+.blogHeader h1 {
+  color: #F8E71C;
+  font-size: 4rem;
+  position: relative;
+  top: 200px;
 }
 
 .whatIsPlanted {
@@ -820,6 +837,123 @@ header .headerBoxImage {
   font-size: 0.9rem;
   letter-spacing: 2px;
   border: none;
+}
+
+.blogMain {
+  height: 250vh;
+  background-color: #F0EFED;
+}
+
+.colFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  color: black;
+}
+.colFlex .aboutPlantedCol {
+  -ms-flex-preferred-size: 37.5%;
+      flex-basis: 37.5%;
+  border: 1px solid pink;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.colFlex .mainCol {
+  -ms-flex-preferred-size: 62.5%;
+      flex-basis: 62.5%;
+  border: 1px solid black;
+  height: 100%;
+}
+
+.aboutPlantedBox {
+  background-color: white;
+  width: 325px;
+  height: 715px;
+  margin-top: 70px;
+  position: relative;
+  left: 5px;
+}
+.aboutPlantedBox figure {
+  position: relative;
+  width: 425px;
+  height: 360px;
+  right: 131px;
+  bottom: 30px;
+  margin: 0;
+}
+.aboutPlantedBox .aboutPlantedTextFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 370px;
+}
+.aboutPlantedBox .aboutPlantedTextFlex a, .aboutPlantedBox .aboutPlantedTextFlex p, .aboutPlantedBox .aboutPlantedTextFlex li {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.aboutPlantedBox .aboutPlantedTextFlex a {
+  background-color: transparent;
+  color: #003c0e;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0;
+  letter-spacing: normal;
+}
+.aboutPlantedBox .aboutPlantedTextFlex li::before {
+  content: "•";
+  color: #0E902D;
+  font-weight: bold;
+  display: inline-block;
+  width: 5%;
+  margin-left: -5%;
+  position: relative;
+  top: 2px;
+}
+.aboutPlantedBox .aboutPlantedTextFlex li {
+  margin-left: 20px;
+  line-height: 25px;
+}
+.aboutPlantedBox .aboutPlantedTextFlex h3 {
+  margin-bottom: 10px;
+}
+.aboutPlantedBox .aboutPlantedTextFlex h3.marginTop {
+  margin-top: 60px;
+}
+
+.ourMission {
+  border-left: 4px solid #F8E71C;
+  border-bottom: 4px solid #F8E71C;
+  padding: 50px 0 50px 0;
+  margin-right: 50px;
+}
+.ourMission .date {
+  margin: 10px 0 50px 0;
+  color: #003c0e;
+  font-style: italic;
+}
+.ourMission .date span {
+  font-weight: bold;
+}
+.ourMission .missionArticle {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.singleCommentFlex figure {
+  height: 100px;
+  width: 100px;
 }
 
 footer {

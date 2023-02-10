@@ -92,3 +92,20 @@ header {
         background-color: $offWhite;
     }
 }
+
+//styles for header on the blog page
+
+.blogHeader {
+    height: 55vh;
+    background-image: url(../../../../assets/blog-header-1.jpg);
+    nav {
+        background-color: #050a0c;
+        width: 100vw;
+    }
+    h1{
+        color: $sunnyYellow;
+        font-size: 4rem;
+        position: relative;
+        top: 200px;
+    }
+}

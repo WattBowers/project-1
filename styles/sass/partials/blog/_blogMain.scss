@@ -1,0 +1,106 @@
+@use "../variables" as *;
+
+.blogMain {
+    height: 250vh;
+    background-color: $offWhite;
+}
+
+.colFlex {
+    display: flex;
+    height: 100%;
+    color: black;
+    .aboutPlantedCol {
+        flex-basis: calc((3/8) * 100%);
+        border: 1px solid pink;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .mainCol {
+        flex-basis: calc((5/8) * 100%);
+        border: 1px solid black;
+        height: 100%;
+    }
+}
+
+//Left column styles
+.aboutPlantedBox {
+    background-color: white;
+    width: 325px;
+    height: 715px;
+    margin-top: 70px;
+    position: relative;
+    left: 5px;
+    figure {
+        position: relative;
+        width: 425px;
+        height: 360px; 
+        right: 131px;
+        bottom: 30px;
+        margin: 0;
+    }
+    .aboutPlantedTextFlex {
+        display: flex;
+        flex-direction: column;
+        height: 370px;
+        a,p,li {
+            @include robotoFont;
+            font-size: .8rem;
+        }
+        a {
+            background-color: transparent;
+            color: #003c0e;
+            font-style: italic;
+            font-weight: bold;
+            padding: 0;
+            letter-spacing: normal;
+        }
+        //this code is taken directly from https://www.w3schools.com/howto/howto_css_bullet_color.asp
+        li::before {
+            content: "\2022"; 
+            color: $green; 
+            font-weight: bold; 
+            display: inline-block; 
+            width: 5%; 
+            margin-left: -5%; 
+            position: relative;
+            top:2px;
+          }
+          li {
+            margin-left: 20px;
+            line-height: 25px;
+          }
+          h3 {
+            margin-bottom: 10px;
+          }
+          h3.marginTop {
+            margin-top: 60px;
+          }
+    }
+}
+
+//Right column styles
+.ourMission {
+    border-left: 4px solid $sunnyYellow;
+    border-bottom: 4px solid $sunnyYellow;
+    padding: 50px 0 50px 0;
+    margin-right: 50px;
+    .date {
+        margin: 10px 0 50px 0;
+        color:#003c0e;
+        font-style: italic;
+        span {
+            font-weight: bold;
+        }
+    }
+    .missionArticle {
+        @include robotoFont;
+    }
+}
+
+.singleCommentFlex {
+    figure {
+        height:100px;
+        width: 100px;
+    }
+}
