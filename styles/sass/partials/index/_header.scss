@@ -10,8 +10,9 @@ header {
         display: flex;
         text-transform: uppercase;
         align-items: center;
+        margin-left: 10%;
         li {
-            margin: 10px 25px;
+            margin: 10px .5%;
         }
         a {
             color: $offWhite;
@@ -24,6 +25,7 @@ header {
             font-size: 1.6rem;
             letter-spacing: 1px;
             font-weight: 100;
+    
         }
         a:hover {
             color: $sunnyYellow;
@@ -72,10 +74,14 @@ header {
 .contactHeader {
     height: 100vh;
     position: absolute;
-    z-index: -1;
+
     nav {
         background-color: #050a0c;
         width: 100vw;
+        ul, li, a {
+            position: relative;
+            z-index: 10;
+        }
     }
     .contactFlex {
         display: flex;
@@ -86,6 +92,7 @@ header {
         background-image: url(../../assets/home-image-1.jpg);
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
     }
     .offWhiteBackground {
         height: 50%;
@@ -102,10 +109,16 @@ header {
         background-color: #050a0c;
         width: 100vw;
     }
-    h1{
-        color: $sunnyYellow;
-        font-size: 4rem;
-        position: relative;
-        top: 200px;
+    .titleFlex {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: calc(100% - 52px);
+        width: 35%;
+        h1{
+            color: $sunnyYellow;
+            font-size: 4rem;
+        }
     }
 }
+    

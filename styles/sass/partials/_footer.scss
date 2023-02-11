@@ -6,6 +6,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
+    position: relative;
     p {
         @include robotoFont;
         font-size: .7rem;

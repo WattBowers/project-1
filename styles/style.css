@@ -244,8 +244,11 @@ html {
   font-size: 125%;
   color: #F0EFED;
   line-height: 1;
+}
+
+html, body {
+  max-width: 100%;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 ul {
@@ -286,9 +289,10 @@ header ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 10%;
 }
 header ul li {
-  margin: 10px 25px;
+  margin: 10px 0.5%;
 }
 header ul a {
   color: #F0EFED;
@@ -355,11 +359,14 @@ header .headerBoxImage {
 .contactHeader {
   height: 100vh;
   position: absolute;
-  z-index: -1;
 }
 .contactHeader nav {
   background-color: #050a0c;
   width: 100vw;
+}
+.contactHeader nav ul, .contactHeader nav li, .contactHeader nav a {
+  position: relative;
+  z-index: 10;
 }
 .contactHeader .contactFlex {
   display: -webkit-box;
@@ -371,6 +378,7 @@ header .headerBoxImage {
   background-image: url(../../assets/home-image-1.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .contactHeader .offWhiteBackground {
   height: 50%;
@@ -385,11 +393,22 @@ header .headerBoxImage {
   background-color: #050a0c;
   width: 100vw;
 }
-.blogHeader h1 {
+.blogHeader .titleFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: calc(100% - 52px);
+  width: 35%;
+}
+.blogHeader .titleFlex h1 {
   color: #F8E71C;
   font-size: 4rem;
-  position: relative;
-  top: 200px;
 }
 
 .whatIsPlanted {
@@ -532,7 +551,7 @@ header .headerBoxImage {
 
 .positionRelativeDownRight {
   position: relative;
-  top: 80px;
+  top: 50px;
 }
 
 .imageLeft, .imageRight {
@@ -673,7 +692,6 @@ header .headerBoxImage {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  z-index: 1;
 }
 
 .infoCol {
@@ -698,6 +716,7 @@ header .headerBoxImage {
   color: #F8E71C;
   line-height: 92px;
   font-size: 4rem;
+  z-index: 10;
 }
 .infoCol .contactInfo {
   color: black;
@@ -840,7 +859,6 @@ header .headerBoxImage {
 }
 
 .blogMain {
-  height: 250vh;
   background-color: #F0EFED;
 }
 
@@ -854,7 +872,6 @@ header .headerBoxImage {
 .colFlex .aboutPlantedCol {
   -ms-flex-preferred-size: 37.5%;
       flex-basis: 37.5%;
-  border: 1px solid pink;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -866,8 +883,10 @@ header .headerBoxImage {
 .colFlex .mainCol {
   -ms-flex-preferred-size: 62.5%;
       flex-basis: 62.5%;
-  border: 1px solid black;
   height: 100%;
+  position: relative;
+  bottom: 100px;
+  height: calc(100% + 100px);
 }
 
 .aboutPlantedBox {
@@ -931,6 +950,19 @@ header .headerBoxImage {
   margin-top: 60px;
 }
 
+.offsetImage figure {
+  background-color: #F8E71C;
+  width: 98%;
+  padding: 0;
+  margin: 0;
+}
+.offsetImage figure img {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  width: 110%;
+}
+
 .ourMission {
   border-left: 4px solid #F8E71C;
   border-bottom: 4px solid #F8E71C;
@@ -951,9 +983,58 @@ header .headerBoxImage {
   font-weight: 400;
 }
 
-.singleCommentFlex figure {
+.commentsFlex {
+  margin-top: 50px;
+}
+.commentsFlex h4 {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+}
+.commentsFlex .singleCommentFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 50px;
+}
+.commentsFlex .singleCommentFlex .textCommentFlex {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+}
+.commentsFlex .singleCommentFlex p {
+  font-family: "Roboto", sans-serif;
+  line-height: 32px;
+  font-weight: 400;
+}
+.commentsFlex .singleCommentFlex h5 {
+  color: #003c0e;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.commentsFlex .singleCommentFlex figure {
   height: 100px;
   width: 100px;
+  margin: 0 40px 0 0;
+}
+
+.formComment {
+  margin-top: 50px;
+}
+.formComment .inputFlex {
+  margin-bottom: 25px;
+}
+.formComment .inputFlex input {
+  padding: 20px;
+}
+.formComment input, .formComment textarea {
+  background-color: transparent;
+}
+.formComment input[type=submit] {
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 footer {
@@ -968,6 +1049,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
+  position: relative;
 }
 footer p {
   font-family: "Roboto", sans-serif;
@@ -979,7 +1062,229 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  header ul {
+    margin: 0;
+  }
   .headerBoxImage {
     display: none;
+  }
+  .founder {
+    height: 100%;
+  }
+  .founderFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .founderFlex .founderTextFlex {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .founderFlex .founderTextFlex a {
+    margin-bottom: 20px;
+  }
+  .founderFlex figure {
+    margin: 40px 0 20px 0;
+  }
+}
+@media (max-height: 740px) {
+  .headerBoxImage {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding-top: 50px;
+  }
+  header .horizontalAlign {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .horizontalAlign h1 {
+    font-size: 3rem;
+    line-height: 92px;
+    text-align: center;
+  }
+  .whatIsPlanted h2 {
+    text-align: center;
+  }
+  .readMore {
+    height: 100%;
+  }
+  .readMore .columnFlex {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .readMore .columnFlex .colTwo {
+    display: none;
+  }
+  .readMore .columnFlex .colThree {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .imageContainer {
+    width: 100vw;
+  }
+  .positionRelativeUpLeft, .positionRelativeDownRight {
+    position: static;
+  }
+  .uniquePlantsFlex, .upcomingWorkshopsFlex {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0;
+  }
+  .uniquePlantsFlex p, .uniquePlantsFlex h3, .uniquePlantsFlex a, .upcomingWorkshopsFlex p, .upcomingWorkshopsFlex h3, .upcomingWorkshopsFlex a {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .upcomingWorkshopsFlex h3 {
+    margin-top: 50px;
+  }
+  .infoList {
+    font-size: 0.8rem;
+    line-height: 30px;
+    height: 100%;
+  }
+  .infoList .infoListFlex li {
+    width: 100%;
+  }
+  .infoList .infoListFlex li div.textBlock p {
+    line-height: 20px;
+  }
+  .infoList .infoListFlex li div.icon {
+    display: none;
+  }
+  .infoList .infoListFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .founderTextFlex {
+    margin: 0;
+  }
+  .founderTextFlex p {
+    font-size: 0.9rem;
+    line-height: 22px;
+    margin: 5px 0 20px 0;
+  }
+}
+@media (max-width: 390px) {
+  .galleryFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 100%;
+  }
+  .galleryFlex figure {
+    width: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .blogHeader nav {
+    background-color: transparent;
+    height: 100%;
+  }
+  .blogHeader nav ul {
+    height: 100%;
+    padding: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .colFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .colFlex .mainCol {
+    position: static;
+    margin-top: 40px;
+  }
+  .colFlex .mainCol input[type=submit] {
+    margin-bottom: 40px;
+  }
+  .colFlex .mainCol figure {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .contactHeader {
+    position: static;
+    height: 50vh;
+    color: black;
+  }
+  .contactHeader .offWhiteBackground {
+    display: none;
+  }
+  .contactHeader nav {
+    background-color: transparent;
+    background-image: url(../../assets/home-image-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .contactHeader nav ul {
+    height: 100%;
+    padding: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 50vh;
+  }
+  .contactMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100% + 300px);
+    background-color: #F0EFED;
+  }
+  .contactMain .infoCol {
+    padding-bottom: 60px;
+  }
+  .contactMain .infoCol h1 {
+    color: black;
+  }
+  .contactMain .formCol .formBox {
+    position: static;
+  }
+  .contactInfo {
+    text-align: center;
+  }
+  .socialsFlex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

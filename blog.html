@@ -15,21 +15,22 @@
     <header class="blogHeader">
             <nav>
                 <ul>
-                    <li><a class="title" href="">Planted</a></li>
-                    <li><a href="">home</a></li>
-                    <li><a href="">about</a></li>
-                    <li><a href="">blog</a></li>
-                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/index.html" class="title" href="">Planted</a></li>
+                    <li><a href="/index.html">home</a></li>
+                    <li><a href="/blog.html#about">about</a></li>
+                    <li><a href="/blog.html">blog</a></li>
+                    <li><a href="/contact.html">contact</a></li>
                 </ul>
             </nav>
-            <div class="wrapper">
+            <div class="titleFlex">
                 <h1>Blog</h1> 
             </div>
+            
     </header>
     <main class="blogMain">
         <div class="colFlex">
             <!-- Left column start -->
-            <div class="aboutPlantedCol">
+            <div id="about" class="aboutPlantedCol">
                 <div class="aboutPlantedBox">
                     <figure><img src="./assets/side-bar-image.jpg" alt=""></figure>
                     <div class="aboutPlantedTextFlex wrapper">
@@ -47,9 +48,9 @@
             </div>
             <!-- left column end / Right column start -->
             <div class="mainCol">
-                <section>
-                    <figure>
-                        <img src="" alt="">
+                <section class="offsetImage">
+                    <figure class="yellowBackground">
+                        <img src="./assets/post-image.jpg" alt="">
                     </figure>
                 </section>
                 <section class="ourMission">
@@ -74,21 +75,40 @@
                                 <figure>
                                     <img src="./assets/profile-image.jpg"></img>
                                 </figure>
-                                 <h5>Tuesday October 9th, 2018 by Jeremy</h5>
+                                <div class="textCommentFlex">
+                                    <h5>Tuesday October 9th, 2018 by Jeremy</h5>
                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus dolor veniam, iste veritatis dolorem! Debitis beatae odit id pariatur quae rerum, delectus velit neque veniam ullam tempore recusandae modi labore expedita assumenda impedit magni dolore adipisci repudiandae facere laborum.</p>
+                                </div> 
                             </div>
                             <div class="singleCommentFlex">
                                 <figure>
                                     <img src="./assets/profile-image-2.jpg"></img>
                                 </figure>
+                                <div class="textCommentFlex">
                                 <h5>Wednesday October 10th, 2018 by Julia</h5>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum sapiente enim eveniet asperiores iste nesciunt, iure hic beatae quia ipsam voluptatum recusandae repellat corrupti perferendis impedit dolorem incidunt adipisci dolores.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section class="formComment">
+                    <form id="contact" action="submit">
+                        <div class="formFlex wrapper">
+                            <div class="inputFlex">
+                                <input form="contact" id="name"name="name" placeholder="Name"type="text">
+                                <input form="contact" id="email"name="email" placeholder="Email address"type="text">
+                            </div>
+                            <textarea placeholder="Comment"form="contact" name="message" id="message"cols="25" rows="8"></textarea>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </section>
             </div>
         </div>
     </main>
+    <footer>
+        <p>Copyright 2018 HackerYou</p>  
+    </footer>
 </body>
 </html>

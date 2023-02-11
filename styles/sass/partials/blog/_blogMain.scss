@@ -1,7 +1,8 @@
+@use "../contact/contactMain";
+
 @use "../variables" as *;
 
 .blogMain {
-    height: 250vh;
     background-color: $offWhite;
 }
 
@@ -11,15 +12,16 @@
     color: black;
     .aboutPlantedCol {
         flex-basis: calc((3/8) * 100%);
-        border: 1px solid pink;
         height: 100%;
         display: flex;
         justify-content: center;
     }
     .mainCol {
         flex-basis: calc((5/8) * 100%);
-        border: 1px solid black;
         height: 100%;
+        position: relative;
+        bottom: 100px;
+        height: calc(100% + 100px);
     }
 }
 
@@ -80,6 +82,21 @@
 }
 
 //Right column styles
+.offsetImage {
+    figure {
+        background-color: $sunnyYellow;
+        width: 98%;
+        padding: 0;
+        margin: 0;
+        img {
+            position: relative;
+            bottom: 20px;
+            left: 20px;
+            width: 110%;
+        }
+    }
+}
+
 .ourMission {
     border-left: 4px solid $sunnyYellow;
     border-bottom: 4px solid $sunnyYellow;
@@ -98,9 +115,49 @@
     }
 }
 
-.singleCommentFlex {
-    figure {
-        height:100px;
-        width: 100px;
+.commentsFlex {
+    margin-top: 50px;
+    h4 {
+        margin-bottom: 40px;
+        font-size: 1.5rem;
+    }
+    .singleCommentFlex {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        .textCommentFlex {
+            flex-basis: 90%;
+        }
+        p {
+            @include robotoFont;
+        }
+        h5 {
+            color: #003c0e;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        figure {
+            height:100px;
+            width: 100px;
+            margin: 0 40px 0 0;
+        }
+    }    
+}
+
+.formComment {
+    margin-top: 50px;
+    .inputFlex{
+        margin-bottom: 25px;
+        input {
+            padding: 20px;
+        }
+    }
+    input, textarea {
+        background-color: transparent;
+    }
+    input[type=submit] {
+        margin-top: 25px;
+        cursor: pointer;
     }
 }

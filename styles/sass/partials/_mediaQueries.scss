@@ -1,6 +1,218 @@
+@use "./variables" as *;
+
 @media (max-width: 900px) {
+    header {
+        ul {
+            margin: 0;
+        }
+    }
     .headerBoxImage {
         display: none;
-        
     } 
+
+    .founder {
+        height: 100%;
+    }
+    .founderFlex {
+        flex-direction: column;
+        .founderTextFlex {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                margin-bottom: 20px;
+            }
+        }
+        figure {
+            margin: 40px 0 20px 0;
+        }
+    }
+}
+
+@media (max-height: 740px) {
+    .headerBoxImage {
+        display: none;
+    }
+}
+    
+@media (max-width: 700px) {
+    header {
+            ul {
+                flex-direction: column;
+                margin: 0;
+                padding-top: 50px;
+        }
+        .horizontalAlign {
+            align-items: flex-start;
+            h1 {
+                font-size: 3rem;
+                line-height: 92px;
+                text-align: center;
+            }
+        }
+    }
+
+    .whatIsPlanted {
+        h2 {
+            text-align: center;
+        }
+    }
+    .readMore {
+        height: 100%;
+        .columnFlex {
+            height: 100%;
+            flex-direction: column;
+            .colTwo {
+                display: none;
+            }
+            .colThree {
+                flex-direction: column-reverse;
+            }
+            }
+        }
+        
+        .imageContainer {
+            width: 100vw;
+        }
+
+        .positionRelativeUpLeft, .positionRelativeDownRight {
+            position:static;
+        }
+
+        .uniquePlantsFlex, .upcomingWorkshopsFlex {
+            align-items: center;
+            padding: 10px 0;
+            p, h3, a {
+                text-align: center;
+                font-size: .8rem;
+            }
+            
+        }
+
+        .upcomingWorkshopsFlex {
+            h3 {
+                margin-top: 50px;
+            }
+        }
+
+        .infoList {
+            font-size: .8rem;
+            line-height: 30px;
+            height: 100%;
+            .infoListFlex li {
+                width: 100%;
+                div.textBlock p {
+                    line-height: 20px;
+                }
+                div.icon {
+                    display: none;
+                }  
+            }
+
+            .infoListFlex {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+
+        .founderTextFlex {
+            margin: 0;
+            p {
+                font-size: .9rem;
+                line-height: 22px;
+                margin: 5px 0 20px 0;
+            }
+        }
+}
+
+@media (max-width: 390px) {
+    .galleryFlex {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        figure {
+            width: 50%;
+        }
+    }
+}
+
+// Blog page queries 
+
+@media (max-width: 700px) {
+    .blogHeader  {
+        nav {
+            background-color: transparent;
+            height: 100%;
+            ul {
+                height: 100%;
+                padding: 0;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    
+    .colFlex {
+        flex-direction: column;
+        .mainCol {
+            position: static;
+            margin-top: 40px;
+            input[type=submit] {
+                margin-bottom: 40px;
+            }
+            figure {
+                display: none;
+            }
+        }
+    }
+}
+
+// Contact page queries 
+
+@media (max-width: 700px) {
+    .contactHeader {
+        position: static;
+        height: 50vh;
+        color: black;
+        .offWhiteBackground {
+            display: none;
+        }
+        nav {
+            background-color: transparent;
+            background-image: url(../../assets/home-image-1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            ul {
+                height: 100%;
+                padding: 0;
+                justify-content: space-evenly;
+                height: 50vh;
+            }
+        }
+        
+    }
+    .contactMain {
+        flex-direction: column;
+        height: calc(100% + 300px);
+        background-color: $offWhite;
+        .infoCol {
+            padding-bottom: 60px;
+            h1 {
+                color: black;
+            }
+        }
+        .formCol .formBox {
+            position: static;
+        }
+    }
+    
+    .contactInfo {
+        text-align: center;
+    }
+
+    .socialsFlex {
+        justify-content: center;
+    }
 }
