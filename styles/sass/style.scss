@@ -1,0 +1,17 @@
+@use "./partials/setup";
+@use "./partials/general";
+@use "./partials/index/header";
+@use "./partials/index/whatIsPLanted";
+@use "./partials/index/readMore";
+@use "./partials/index/infoList";
+@use "./partials/index/backgroundImage";
+@use "./partials/index/founder";
+@use "./partials/index/gallery";
+@use "./partials/contact/contactMain";
+@use "./partials/blog/blogMain";
+@use "./partials/footer";
+@use "./partials/mediaQueries";
+
+@use "./partials/variables" as *;
+
+

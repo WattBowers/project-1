@@ -1,0 +1,118 @@
+@use "../variables" as *;
+
+.contactMain {
+    height: 97vh;
+    display: flex;
+    width: 100vw;
+}
+
+.infoCol {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: $sunnyYellow;
+        line-height: 92px;
+        font-size: 4rem;
+        z-index: 10;
+    }
+    .contactInfo {
+        color: black;
+        position: relative;
+        top: 25px;
+        line-height: 30px;
+        p {
+            @include robotoFont;
+        }
+        .emailInfo {
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin: 20px 0;
+            font-family: 'Josefin Sans', sans-serif;  
+        }
+    }
+}
+
+.socialsFlex {
+    display: flex;
+    position: relative;
+    right: 9px;
+    figure {
+        max-height: 30px;
+        max-width: 30px;
+        margin: 0 20px 0 0;
+        padding: 0;
+    }
+    a {
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+.formCol {
+    flex-basis: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .formBox {
+        background-color: $sunnyYellow;
+        height: 500px;
+        width: 90%;
+        position: relative;
+        top: 70px;
+        form {
+            background-color: white;
+            position: relative;
+            bottom: 20px;
+            left: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+// flex properties of the items inside the form
+
+.formFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .inputFlex {
+        display: flex;
+        justify-content: space-between;
+        height: 15%;
+        input {
+            width: calc(50% - 10px); 
+            border: none;
+            border-bottom: 2px solid $green;
+            outline: none;
+        }
+        input::placeholder {
+            font-size: .8rem;
+            
+        }
+    }
+    textarea {
+        border: 2px solid $green;
+        resize: none;
+        outline: none;
+        padding: 15px;
+    }
+    textarea::placeholder {
+        font-size: .8rem;
+    }
+    input[type = submit] {
+        background-color: $green;
+        color: $offWhite;
+        padding: 10px 30px;
+        font-weight: bold;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        border: none;
+    }
+}

@@ -1,0 +1,51 @@
+@use "../variables" as *;
+
+.infoList {
+    height: 75vh;
+    background-color: $offWhite;
+    color: black;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+
+.infoListFlex {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    li {
+        width: 50%;
+        display: flex;
+        margin-top: 40px;
+        div.icon {
+            position: relative;
+            bottom: 10px;
+            border-radius: 50%;
+            background-color: $sunnyYellow;
+            height: 50%;
+            width: 8%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        div.textBlock{ 
+            width: 95%;
+            h3 {
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+            p {
+                @include robotoFont;
+            }
+        }
+        
+    }
+}

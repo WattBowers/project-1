@@ -1,0 +1,124 @@
+@use "../variables" as *;
+
+header {
+    background-image: url(../../assets/home-image-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: $offWhite;
+    height: 95vh;
+    ul{
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        margin-left: 10%;
+        li {
+            margin: 10px .5%;
+        }
+        a {
+            color: $offWhite;
+            font-size: .8rem;
+            letter-spacing: 1px;
+            background: none;
+        }
+        a.title {
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            font-weight: 100;
+    
+        }
+        a:hover {
+            color: $sunnyYellow;
+        }
+        a.title:hover {
+            color: $offWhite;
+        }
+    }
+    .horizontalAlign {
+        display: flex;
+        justify-content: center;
+        height: calc(100vh - 56.797px);
+        h1{
+            font-size: 8.3rem;
+            font-weight: 400;
+            margin: 20px;
+            line-height: 92px;
+            z-index: 1;
+        }
+    }
+    .titleFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: start;
+        .yellowText {
+            color: $sunnyYellow;
+        }
+    }
+    .headerBoxImage {
+        height: auto;
+        min-width: 600px;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 33vh;
+        
+    }
+    
+}
+
+// Styles for the header on the Contact page
+
+
+.contactHeader {
+    height: 100vh;
+    position: absolute;
+
+    nav {
+        background-color: #050a0c;
+        width: 100vw;
+        ul, li, a {
+            position: relative;
+            z-index: 10;
+        }
+    }
+    .contactFlex {
+        display: flex;
+    }
+    //this sets the background colors/images to the correct size on the contact page
+    .foliageBackground {
+        height: 50%;
+        background-image: url(../../assets/home-image-1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .offWhiteBackground {
+        height: 50%;
+        background-color: $offWhite;
+    }
+}
+
+//styles for header on the blog page
+
+.blogHeader {
+    height: 55vh;
+    background-image: url(../../../../assets/blog-header-1.jpg);
+    nav {
+        background-color: #050a0c;
+        width: 100vw;
+    }
+    .titleFlex {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: calc(100% - 52px);
+        width: 35%;
+        h1{
+            color: $sunnyYellow;
+            font-size: 4rem;
+        }
+    }
+}
+    

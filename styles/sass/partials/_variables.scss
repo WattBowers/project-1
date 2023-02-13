@@ -1,0 +1,11 @@
+$black: #2C2C2C;
+$offWhite: #F0EFED;
+$forestGreen: #074115;
+$sunnyYellow: #F8E71C;
+$green: #0E902D; 
+
+@mixin robotoFont {
+    font-family: 'Roboto', sans-serif;
+    line-height: 32px;
+    font-weight: 400;
+  }
