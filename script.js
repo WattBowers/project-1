@@ -19,15 +19,35 @@ console.log(gallerySection)
 
 leftArrow[0].addEventListener('click', () => {
     if(count !== 0) {
-        count -= 1; 
-        gallerySection[0].innerHTML = imageArray[count];
+        let currentImage = document.querySelector('.imageJsContainer')
+        currentImage.classList.remove('fadeOut')
+        currentImage.classList.remove('fadeIn')
+        
+        currentImage.classList.add('fadeOut')
+        
+        setTimeout(() => {
+            count -= 1; 
+            gallerySection[0].innerHTML = imageArray[count];
+            currentImage = document.querySelector('.imageJsContainer')
+            currentImage.classList.add('fadeIn')
+        }, '1500')
     }
 
 })
 
 rightArrow[0].addEventListener('click', () => {
     if(count !== imageArray.length -1) {
-        count += 1; 
-        gallerySection[0].innerHTML = imageArray[count];
+        let currentImage = document.querySelector('.imageJsContainer')
+        currentImage.classList.remove('fadeOut')
+        currentImage.classList.remove('fadeIn')
+
+        currentImage.classList.add('fadeOut')
+        
+        setTimeout(() => {
+            count += 1; 
+            gallerySection[0].innerHTML = imageArray[count];
+            currentImage = document.querySelector('.imageJsContainer')
+            currentImage.classList.add('fadeIn')
+        }, '1500')
     }
 })

@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .gallery {
     height: 70vh;
 }
@@ -9,5 +11,42 @@
     justify-content: center;
     figure {
         margin: 0 10px;
+    }
+    button {
+        height: 100px;
+        width: 50px;
+        background-color: $green;
+        color: white;
+        border: none;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 3s;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
