@@ -1,12 +1,8 @@
-console.log("hello")
-
 const gallerySection = document.getElementsByClassName('imageJsContainer')
 const leftArrow = document.getElementsByClassName('leftArrow');
 const rightArrow = document.getElementsByClassName('rightArrow')
 
 let count = 0;
-
-console.log(gallerySection)
 
 const imageArray = [
     '<figure><img src="./assets/gallery-image-1.jpg" alt="A green house"></figure>',
@@ -15,7 +11,6 @@ const imageArray = [
 ]
 
 gallerySection[0].innerHTML = imageArray[count];
-console.log(gallerySection)
 
 leftArrow[0].addEventListener('click', () => {
     if(count !== 0) {
